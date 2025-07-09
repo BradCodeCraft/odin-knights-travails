@@ -5,6 +5,12 @@ import Vertex from "./Vertex.js";
  * @param {number[]} end
  */
 function knightMoves(start, end) {
+  if (start.toString() === end.toString()) {
+    console.log("You're already at the destination!");
+    console.log(start);
+    return;
+  }
+
   /** @type {Map<string, Vertex>} */
   let mapOfVertices = new Map();
   const startVertex = new Vertex(start);
